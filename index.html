@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Web Calculator</title>
+</head>
+<body>
+  <h1>Simple Web Calculator</h1>
+  <p>Check the result via alert after input.</p>
+
+  <script>
+    // Ask user for inputs
+    let num1 = parseFloat(prompt("Enter the first number:"));
+    let operator = prompt("Enter an operator (+, -, *, /):");
+    let num2 = parseFloat(prompt("Enter the second number:"));
+    let result;
+
+    // Perform calculation
+    if (operator === "+") {
+      result = num1 + num2;
+    } else if (operator === "-") {
+      result = num1 - num2;
+    } else if (operator === "*") {
+      result = num1 * num2;
+    } else if (operator === "/") {
+      if (num2 !== 0) {
+        result = num1 / num2;
+      } else {
+        result = "Error: Cannot divide by 0";
+      }
+    } else {
+      result = "Invalid operator!";
+    }
+
+    // Show result
+    alert("Result: " + result);
+  </script>
+</body>
+</html>
+
